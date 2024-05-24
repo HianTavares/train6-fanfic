@@ -1,0 +1,102 @@
+
+
+body{
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    background-color: rgb(16, 29, 45);
+}
+#all{
+    margin: none;
+    padding: 0;
+}
+#topo{
+    width: 100%;
+    border: 1px solid red;
+    height: 20vh;
+    display: flex;
+    
+    
+    align-items: center;
+}
+#img-topo{
+    width: auto;
+    height: 10vh;
+   
+}
+.span-topo {
+    margin: 0 3%;
+    font-size: 3vw;
+    color: aliceblue;
+    text-decoration: none; /* Remove o sublinhado padrão */
+    position: relative;
+}
+
+.span-topo::after {
+    content: '';
+    position: absolute;
+    left: -5%; /* Ajuste para aumentar a extensão à esquerda */
+    bottom: -2px; /* Ajuste a posição vertical do sublinhado */
+    width: 110%; /* Ajuste para aumentar a extensão à direita */
+    height: 2px; /* Ajuste a espessura do sublinhado */
+    background-color: currentColor; /* Usa a cor do texto */
+    transform: scaleX(0); /* Inicialmente oculto */
+    transition: transform 0.3s ease; /* Suaviza a transição */
+}
+
+.span-topo:hover::after {
+    transform: scaleX(1); /* Exibe o sublinhado ao passar o mouse */
+}
+
+
+#conteudo{
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: row;
+}
+#conteudo-do-conteudo{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+#conteudo h2{
+    width: 100%;
+    font-size: 5vh;
+    text-align: center;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: aliceblue;
+}
+.img-conteudo{
+    border: green 1px solid;
+    border-radius: 1vh 1vh 0 0 ;
+    background-color: rgb(70, 70, 138);
+    padding-bottom: 15%;
+    width: 30%;
+    height: 30%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 4vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: aliceblue;
+    
+}
+.img-conteudo img{
+    flex-wrap: wrap;
+    width: 100%;
+    
+}
+
+
+
+
+
+@media (max-width: 800px) {
+    #all {
+        background-color: rgb(16, 29, 45);
+        height: 100vh;
+        width: 100%;
+    }
+   
+}
